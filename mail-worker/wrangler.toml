@@ -31,6 +31,8 @@ directory = "./dist"
 not_found_handling = "single-page-application"
 run_worker_first = true
 
+# Production builds must use wrangler deploy to apply cron triggers.
+# Nonproduction versions upload creates previews and does not apply cron.
 [triggers]
 crons = ["0 * * * *"]
 
